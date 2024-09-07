@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body{
+  Background-color:#FBF9F1;
+}
 
 .navbar {
   background-color: #92c7cf;
