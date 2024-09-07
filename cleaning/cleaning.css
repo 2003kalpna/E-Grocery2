@@ -147,42 +147,18 @@
 
   /* Footer */
 
-  .footer{
-    width: 100%;
-    height: 250px;
+  footer {
     background-color: #e5e1da;
 }
 
-.main{
+.footer-content {
     display: flex;
-    text-align: center;
-    justify-content:space-evenly;
-    padding-top: 10px;
-}
-.first h3{
-    padding-top: 10px;
-}
-.second h3{
-    padding-top: 10px;
-}
-.third h3{
-    padding-top: 10px;
-}
-.third a{
-    text-decoration: none;
-    color: #000000;
-    padding: 10px;
-}
-.fourth h3{
-    padding-top: 10px;
-}
-.fourth input{
-    text-decoration-line: none;
-
-}
-.fourth i{
-    color: #000000;
-    padding: 10px;
-    padding-top: 20px;
+    justify-content: space-around;
+    padding: 40px;
+    height: 150px;
 }
 
+.footer-content h4 {
+    margin-bottom: 5px;
+    font-size: large;
+}
