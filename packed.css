@@ -5,6 +5,7 @@
 
 body {
     Background-color: #FBF9F1;
+    overflow-x: hidden; 
 }
 
 .navbar {
@@ -16,73 +17,63 @@ body {
     align-items: center;
     height: 50px;
     position: sticky;
+    top: 0;
 }
-
 .navbar .logo h1 {
     margin: 0;
-    font-size: 16px;
+    font-size: 24px;
 }
-
 .menu a {
     font-size: 18px;
-    font-weight: 3rem;
+    font-weight: 500;
     text-decoration: none;
     color: #000000;
     padding: 12px;
 }
-
+.menu-icon{
+    display:none;
+}
+.menu-icon i{
+    color: white;
+    font-size: 25px;
+}
+@media (max-width:480px){
+    .menu a {
+        position: relative;
+        justify-items:right;
+        top: 117px;
+        left: 0;
+        right: 0;
+        background-color: #92c7cf;
+        gap:0;
+    }
+    .menu a{
+        padding: 10px 80px;
+        display: flex;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .menu-icon i{
+        color: black;
+    }
+    .icons a i{
+        padding: 5px;
+    }   
+}
 .menu a:hover {
     color: #28a745;
     cursor: pointer;
 }
 
 .icons i {
-    font-size: 18px;
+    font-size: 20px;
     color: #000000;
     padding: 10px 10px;
 }
 
 .icons i:hover {
     color: #28a745;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-        /* Start at the first image */
-    }
-    25% {
-        transform: translateX(0);
-        /* Hold the first image */
-    }
-    30.33% {
-        transform: translateX(-100%);
-        /* Move to the second image */
-    }
-    52.33% {
-        transform: translateX(-100%);
-        /* Hold the second image */
-    }
-    62.66% {
-        transform: translateX(-200%);
-        /* Move to the third image */
-    }
-    75.66% {
-        transform: translateX(-200%);
-        /* Hold the third image */
-    }
-    82.66% {
-        transform: translateX(-300%);
-        /* Hold the third image */
-    }
-    92.78% {
-        transform: translateX(-300%);
-        /* Hold the third image */
-    }
-    100% {
-        transform: translateX(0);
-        /* Reset to the first image */
-    }
 }
 
 .packedDelight {
@@ -96,41 +87,38 @@ body {
     font-weight: bold;
     margin-bottom: 12px;
     color: #AAD7D9;
+    -webkit-text-stroke: 1px #787777;
 }
 
-.main-card {
-    margin: 10vh;
-    margin-top: 4px;
-    background-color: #AAD7D9;
-    /* Light blue background similar to the image */
-    padding: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.product-section {
+    padding: 40px;
+    background-color: #92c7cf;
+    margin: 20px 55px 20px 55px;
 }
-
-
-/* Product grid layout */
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 37px;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-
-/* Individual product card styling */
-
 .product {
-    background-color: #FBF9F1;
-    margin-bottom: 37px;
-    padding: 60px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
     text-align: center;
-    width: 236px;
-    height: 230px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.product:hover {
+    transform: translateY(-5px);
 }
 
 .product img {
@@ -139,19 +127,22 @@ body {
     margin-bottom: 10px;
 }
 
-.product p {
+.product h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-price {
     font-size: 18px;
-    font-weight: 900;
-    text-shadow: 1.8px 1.8px #d2d2d27b;
-}
-
-.product:hover {
-    background-color: #f2f2f2;
-    transform: translatey(-5px);
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .add-button {
@@ -162,6 +153,9 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 15px;
+    right: 25%;
 }
 
 .add-button a {
@@ -169,10 +163,16 @@ body {
     text-decoration: none;
 }
 
+/* Resetting margins and paddings */
+
+    
+/* Individual product card styling */
+
+/* Footer styles */
 .footer {
     width: 100%;
-    height: 250px;
     background-color: #e5e1da;
+    padding: 20px 0;
 }
 
 .main {
@@ -182,15 +182,7 @@ body {
     padding-top: 10px;
 }
 
-.first h3 {
-    padding-top: 10px;
-}
-
-.second h3 {
-    padding-top: 10px;
-}
-
-.third h3 {
+.main div h3 {
     padding-top: 10px;
 }
 
@@ -200,47 +192,42 @@ body {
     padding: 10px;
 }
 
-.fourth h3 {
-    padding-top: 10px;
-}
-
 .fourth input {
-    text-decoration-line: none;
+    text-decoration: none;
 }
 
 .fourth i {
     color: #000000;
     padding: 10px;
-    padding-top: 20px;
 }
 
 
-/* Medium Devices (tablets, 481px and up) */
 
-@media (min-width: 376px) and (max-width: 768px) {
-    /* CSS for tablets and larger phones */
-    body {
-        overflow-x: hidden;
-    }
+/* Medium Devices (tablets, 481px and up) */
+@media (min-width: 481px) and (max-width: 768px) {
     .navbar .logo h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
+ 
     .menu a {
         font-size: 14px;
     }
     .icons i {
         font-size: 18px;
     }
-    .hero {
-        height: 400px;
+    .packedDelight h2 {
+        font-size: 40px;
+    }
+    .main-card {
+        padding: 40px;
+    }
+    .product {
+        width: 200px;
     }
 }
 
-
 /* Large Devices (desktops, 769px and up) */
-
 @media (min-width: 769px) {
-    /* CSS for desktops */
     body {
         font-size: 16px;
     }
@@ -253,129 +240,4 @@ body {
     .icons i {
         font-size: 20px;
     }
-    .hero {
-        height: 500px;
-    }
 }
-
-
-/* android phone */
-
-
-/* @media (max-width:375px) {
-  body {
-      width: 100%;
-      overflow-x: hidden; /* Prevent right-side overflow 
-  }
-  .navbar{
-      background-color: chartreuse;
-
-  }
-  .navbar .logo h1 {
-      width: 10px;
-      height: 10px;
-      display: flex;
-     
-  }
-  .menu a{
-      font-size: 10px;
-      text-align: center;
-  }
-  .icons i{
-      font-size: 14px;
-  }
-  .hero {
-      width: 100%;
-      height: 320px;
-  }
-
-  .horizontal-images {
-      width: 100%;
-  }
-
-  footer {
-      width: 100%;
-  }
-
-  .footer-nav {
-      width: 100%;
-      height: 40px;
-      padding: 0%;
-  }
-
-  .footer-container {
-      display: flex;
-      width: 100%; /* Responsive width */
-
-
-/* height: auto; /* Responsive height */
-
-
-/* flex-wrap: wrap; /* Prevents overflow by wrapping content 
-  } */
-
-
-/* .footer-bottom {
-      height: auto;
-  }
-}
-*/
-
-
-/* 
-
-
-@media (max-width: 720px) {
-  body {
-      width: 100%;
-      overflow-x: hidden; /* Prevent right-side overflow 
-  }
-  .navbar .logo h1 {
-      width: 10px;
-      height: 10px; */
-
-
-/* display: flex;
-  }
-  .menu a{
-      font-size: 10px;
-      text-align: center;
-  }
-  .icons i{
-      font-size: 14px;
-  }
-  .hero {
-      width: 100%;
-      height: 320px;
-  }
-
-  .horizontal-images {
-      width: 100%;
-  }
-
-  footer {
-      width: 100%;
-  }
-
-  .footer-nav {
-      width: 100%;
-      height: 40px;
-      padding: 0%;
-  }
-
-  .footer-container {
-      display: flex;
-      width: 100%; /* Responsive width */
-
-
-/* height: auto; /* Responsive height */
-
-
-/* flex-wrap: wrap; /* Prevents overflow by wrapping content  */
-
-
-/* }
-
-  .footer-bottom {
-      height: auto;
-  } */
