@@ -18,6 +18,14 @@ body {
     position: sticky;
 }
 
+.navbar .logo h2 {
+    margin: 0;
+    font-size: 25px;
+    font-style: italic;
+    color: #ff0000;
+    border-radius: 2px;
+}
+
 .navbar .logo h1 {
     margin: 0;
     font-size: 16px;
@@ -47,8 +55,17 @@ body {
 }
 
 .title {
-    margin-top: 40px;
     text-align: center;
+    padding: 20px;
+}
+
+.title h2 {
+    text-shadow: 3px 4px #d4d4d4ac;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #AAD7D9;
+    -webkit-text-stroke: 1px #787777;
 }
 
 .product-section {
