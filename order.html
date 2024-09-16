@@ -28,11 +28,17 @@
                 <div class="form-group">
                     <label for="product"><b>Product</b></label>
                     <br>
-                    <input type="text" id="product" name="product" >
+                    <input type="text" id="product" name="product">
                 </div>
                 <br><br>
                 <b>Quantity</b>
-                <input type="number" class="num">
+                <input type="number" class="num" id="quantity">
+                <br><br>
+                <div class="form-group">
+                    <label for="price"><b>Price</b></label>
+                    <br>
+                    <input type="text" id="price" name="price">
+                </div>
                 <br><br>
                 <b>Payment Method</b><br>
                 <select id="pay" required>
@@ -55,11 +61,20 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             const productField = document.getElementById('product');
+            const priceField = document.getElementById('price');
             const productName = getQueryParam('product');
+            const price = parseFloat(getQueryParam('price'));
+            const quantityField = document.getElementById('quantity');
             if (productName) {
                 productField.value = decodeURIComponent(productName);
+                quantityField.addEventListener('input', function() {
+                    const quantity = parseFloat(quantityField.value);
+                    priceField.value = price * quantity;
+                });
             }
         });
+
+
 
         document.getElementById('myform').addEventListener('submit', function(event) {
             const name = document.getElementById('name').value;
