@@ -48,17 +48,17 @@ b {
 }
 
 button {
-    width: 563px;
+    border-radius:10px;
     background-color: #355E3B;
     height: 40px;
     border: none;
-    margin-left: 40px;
+    margin-left: 240px;
 }
 
 a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
+     
 }
 
 #product,
@@ -86,7 +86,7 @@ a {
         justify-content: center;
     }
     .container {
-        height: 600px;
+        height: 580px;
         width: 80%;
         background-color: #AAD7D9;
         border-radius: 10px;
@@ -120,19 +120,15 @@ a {
         border: none;
     }
     button {
-        width: 250px;
+        
         background-color: #355E3B;
         height: 40px;
         border: none;
-        margin-top: 10px;
-        margin-left: 20px;
+        
+        margin-left: 90px;
     }
-    a {
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-    }
-    #product {
+   
+    #product , #price {
         margin-left: 20px;
         height: 30px;
         border: none;
