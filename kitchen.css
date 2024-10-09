@@ -18,11 +18,15 @@ body {
     position: sticky;
 }
 
-.navbar .logo h1 {
-    margin: 0;
-    font-size: 16px;
-}
 
+.navbar .logo h2 {
+    margin: 0;
+    font-size: 25px;
+    font-style: italic;
+    color: #ff0000;
+    border-radius: 2px;
+   
+}
 .menu a {
     font-size: 18px;
     font-weight: 3rem;

@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
 }
-body{
-  background-color: #fbf9f1;
-}
 
 .navbar {
   background-color: #92c7cf;
@@ -17,9 +14,13 @@ body{
   position: sticky;
 }
 
-.navbar .logo h1 {
+.navbar .logo h2 {
   margin: 0;
-  font-size: 16px;
+  font-size: 25px;
+  font-style: italic;
+  color: #ff0000;
+  border-radius: 2px;
+ 
 }
 
 .menu a{
@@ -33,224 +34,170 @@ padding: 12px;
   color: #28a745;
   cursor: pointer;
 }
+.nav-search{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: pink;
+  width: 1000px;
+  height:40px;
+  border-radius: 15px;
+  display: none;
+}
+ 
+.search-btn{
+
+  text-align: center;
+  width:40px;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+ 
+}
+.search-input{
+  width:100%;
+  font-size: 1rem;
+  border:none;
+}
+.search-icon{
+  width:45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: black;
+  background-color: rgb(255, 255, 0);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+.nav-search:hover{
+  border: 2px solid orange;
+}
 .icons i{
   font-size: 18px;
   color: #000000;
   padding: 10px 10px;
 }
+.icons .fa-bars{
+  display: none;
+}
+
 .icons i:hover{
   color: #28a745;
 }
-#search-banner{
-max-width: 1450px auto;
-height: 500px;
-border-radius: 10px;
-background-color: #ecf7ee;
-margin:  0px auto;
-position: relative;
-overflow: hidden;
-background-image: url(bg.png);
-background-repeat: no-repeat;
-background-size: 1000px;
-background-position: bottom right;
-padding: 10px;
-display: flex;
-align-items: center;
+
+
+ 
+
+ body {
+  font-family: Arial, sans-serif;
+  
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+   
+   
+ }  
+
+
+
+header {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.bg-1{
-  position: absolute;
-  left: 800px;
-  top: -25px;
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  object-position: center;
-  background-position: bottom;
+.map{
+  display: flex;
 }
-.bg-11{
-  position: absolute;
-  left: 800px;
-  top: 205px;
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  object-position: center;
-  background-position: bottom;
+.map iframe{
+  margin: 50px auto;
+}
+.container {
+  /* max-width: 800px; */
+  margin: 50px auto;
+  padding: 20px;
+  border: 3px solid #92C7CF;
+  border-radius: 5px;
+  background-color: #FBF9F1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 32%;
+  margin-left: 10%;
+}
+::placeholder{
+  color: #92C7CF;
 }
 
-.bg-2{
-position: absolute;
-left: -1%;
-top: 75px;
-width: 650px;
-height: 580px;
-object-position: center;
-object-fit: contain;
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
-.search-banner-text{
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  margin-left: 450px;
-  top: -60px;
-  position: relative;
-}
-.fa-regular {
-  
-  color:red;
 }
 
-
-.container{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: left;
-	padding: 20px 100px;
+.contact-field {
+  margin-bottom: 15px;
 }
 
-
-
-.contact-box{
-	max-width: 1450px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background-color:#ecf7ee ;
-  border-radius: 10px;
-  margin-top: -65px auto;
-	
-}
-
-.left{
-	background: url("icons.png") no-repeat center;
-	background-size: cover;
-  background-color: #080703;
-	height: 90%;
-  width: 450px;
-  left: 100px;
- border-image: 20px;
- position: relative;
-
- border-radius: 20px;
-
-}
-
-.right{
-	padding: 25px 40px;
-}
-
-h2{
-	position: relative;
-	padding: 0 0 10px;
-	margin-bottom: 10px;
-}
-
-h2:after{
-	content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 50px;
-    border-radius: 2px;
-    background-color: #2ecc71;
-}
-
-.field{
-	width: 100%;
-	border: 2px solid rgba(0, 0, 0, 0);
-	outline: none;
-	background-color:#92c7cf;
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-	transition: .3s;
-  border-radius: 15px;
-}
-
-.field:hover{
-	background-color: rgba(0, 0, 0, 0.1);
-}
-
-textarea{
-	min-height: 150px;
-}
-
-.btn{
-	width: 100%;
-	padding: 0.5rem 1rem;
-	background-color: #2ecc71;
-	color: #fff;
-	font-size: 1.1rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: .3s;
-}
-
-.btn:hover{
-    background-color: #27ae60;
-}
-
-.field:focus{
-    border: 2px solid rgba(30,85,250,0.47);
-    background-color: #fff;
-}
-
-.para1{
-text-align: center;
-font-weight: 400;
-margin: 45px;
-font-size: 900px;
-font-size: medium;
-vertical-align:middle;
-font-size: 3vh;
-
-}
-
-
-
-
-.footer{
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   width: 100%;
-  height: 250px;
+  padding: 10px;
+  border: 1px solid #92C7CF;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #92C7CF;
+  border: 1 px solid;
+  border-radius: 3px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #92C7CF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* footer */
+
+footer {
   background-color: #e5e1da;
 }
-.main{
-  display: flex;
-  text-align: center;
-  justify-content:space-evenly;
-  padding-top: 10px;
-}
-.first h3{
-  padding-top: 10px;
-}
-.second h3{
-  padding-top: 10px;
-}
-.third h3{
-  padding-top: 10px;
-}
-.third a{
-  text-decoration: none;
-  color: #000000;
-  padding: 10px;
-}
-.fourth h3{
-  padding-top: 10px;
-}
-.fourth input{
-  text-decoration-line: none;
 
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  height: 150px;
 }
-.fourth i{
-  color: #000000;
-  padding: 10px;
-  padding-top: 20px;
+
+.footer-content h4 {
+  margin-bottom: 5px;
+  font-size: large;
+
 }
